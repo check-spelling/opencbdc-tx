@@ -1,0 +1,26 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# URL escaped characters
+\%[0-9A-F]{2}
+
+# sha
+\b[0-9a-f]{32,}\b
+"[0-9a-f]{32,}"
+
+# accounts?
+\b[0-9a-z]{60,}\b
+
+# acceptable duplicates
+\s(data|height|key|log|logger|long|LONG|port|timeout) \g{-1}\s
+
+# Compiler flags
+[\t "'`=(]-[DWifl]
+\b--W
+
+# tar arguments
+\b(?:\\n|)tar(?:\s+-[a-zA-Z]+|\s[a-z]+)+
+
+\\return
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b

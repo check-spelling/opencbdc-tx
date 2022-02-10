@@ -26,7 +26,7 @@ class format_test : public ::testing::Test {
     cbdc::buffer_serializer deser;
 };
 
-TEST_F(format_test, inordinant_declared_lengths_are_handled) {
+TEST_F(format_test, inordinate_declared_lengths_are_handled) {
     // manually serialize a vector declaring an obscenely large size
     ser << std::numeric_limits<uint64_t>::max();
     ser << 12LLU;

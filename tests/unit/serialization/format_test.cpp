@@ -220,7 +220,7 @@ TEST_F(format_test, malformed_vectors_cannot_roundtrip) {
     EXPECT_FALSE(deser);
 }
 
-TEST_F(format_test, welformed_unordered_maps_roundtrip) {
+TEST_F(format_test, wellformed_unordered_maps_roundtrip) {
     std::unordered_map<int16_t, uint64_t> m0{};
     ser << m0;
     EXPECT_TRUE(ser);
